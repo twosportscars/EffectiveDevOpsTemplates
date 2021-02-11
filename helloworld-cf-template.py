@@ -1,5 +1,6 @@
 """Generating CloudFormation template."""
 
+# ---- Run this with python27 command ---
 from troposphere import (
     Base64,
     ec2,
