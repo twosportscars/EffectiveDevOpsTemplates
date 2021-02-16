@@ -61,7 +61,7 @@ ud = Base64(Join('\n', [
 
 t.add_resource(ec2.Instance(
     "instance",
-    ImageId="ami-0e90493c90abc1f3b",
+    ImageId="ami-0d46c224f92361863",
     InstanceType="t4g.micro",
     KeyName=Ref("KeyPair"),
     NetworkInterfaces=[
