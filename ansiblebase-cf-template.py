@@ -58,7 +58,7 @@ t.add_resource(ec2.SecurityGroup(
 
 ud = Base64(Join('\n', [ "#!/bin/bash", 
      AnsiblePullCmd, 
-     "echo '*/10 * * * * {}' > /etc/cron.d/ansible-pull".format(AnsiblePullCmd) 
+     "echo '*/10 * * * * ec2-user {}' > /etc/cron.d/ansible-pull".format(AnsiblePullCmd) 
 ]))
 
 t.add_resource(ec2.Instance(
