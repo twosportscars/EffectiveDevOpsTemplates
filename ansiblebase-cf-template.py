@@ -57,13 +57,12 @@ t.add_resource(ec2.SecurityGroup(
 ))
 
 ud = Base64(Join('\n', [ "#!/bin/bash", 
-     AnsiblePullCmd, 
-     "echo '*/10 * * * * ec2-user {}' > /etc/cron.d/ansible-pull".format(AnsiblePullCmd) 
-]))
+     AnsiblePullCmd 
+ ]))
 
 t.add_resource(ec2.Instance(
     "instance",
-    ImageId="ami-0d6a40a60cbff7080",
+    ImageId="ami-0d46c224f92361863",
     InstanceType="t4g.micro",
     KeyName=Ref("KeyPair"),
     NetworkInterfaces=[
